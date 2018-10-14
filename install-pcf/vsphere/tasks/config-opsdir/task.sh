@@ -180,7 +180,7 @@ director_config=$(cat <<-EOF
     "user": "$db_username",
     "password": "$db_password",
     "database": "$db_database"
-  }
+  },
   "blobstore_type": "s3",
   "s3_blobstore_options": {
     "endpoint": "$S3_ENDPOINT",

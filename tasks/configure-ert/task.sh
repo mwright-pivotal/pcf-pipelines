@@ -343,6 +343,19 @@ cf_properties=$(
         ".properties.system_blobstore.external_gcs.access_key": { "value": $gcp_storage_access_key },
         ".properties.system_blobstore.external_gcs.secret_key": { "value": { "secret": $gcp_storage_secret_key } }
       }
+    elif $iaas == "vsphere" then
+      {
+        ".properties.system_blobstore": { "value": "external" },
+        ".properties.system_blobstore.external.buildpacks_bucket": { "value": "pas-buildpacks" },
+        ".properties.system_blobstore.external.droplets_bucket": { "value": "pas-droplets" },
+        ".properties.system_blobstore.external.packages_bucket": { "value": "pas-packages" },
+        ".properties.system_blobstore.external.resources_bucket": { "value": "pas-resources" },
+        ".properties.system_blobstore.external.access_key": { "value": $aws_access_key },
+        ".properties.system_blobstore.external.secret_key": { "value": { "secret": $aws_secret_key } },
+        ".properties.system_blobstore.external.signature_version": { "value": "4" },
+        ".properties.system_blobstore.external.region": { "value": "minio" },
+        ".properties.system_blobstore.external.endpoint": { "value": $s3_endpoint }
+      }
     else
       .
     end
