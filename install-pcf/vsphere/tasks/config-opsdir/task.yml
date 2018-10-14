@@ -70,6 +70,15 @@ params:
   NSX_USERNAME:
   NSX_PASSWORD:
   NSX_CA_CERTIFICATE:
+  AWS_REGION:
+  db_password:
+  db_username:
+  db_host:
+  db_database:
+  s3_bucket:
+  s3_access_key_id:
+  s3_secret_access_key:
+  S3_ENDPOINT:
 
 inputs:
   - name: pcf-pipelines

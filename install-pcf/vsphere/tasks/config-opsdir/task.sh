@@ -173,8 +173,22 @@ director_config=$(cat <<-EOF
   "ntp_servers_string": "$NTP_SERVERS",
   "resurrector_enabled": $ENABLE_VM_RESURRECTOR,
   "max_threads": $MAX_THREADS,
-  "database_type": "internal",
-  "blobstore_type": "local",
+  "database_type": "external",
+  "external_database_options": {
+    "host": "$db_host",
+    "port": 3306,
+    "user": "$db_username",
+    "password": "$db_password",
+    "database": "$db_database"
+  }
+  "blobstore_type": "s3",
+  "s3_blobstore_options": {
+    "endpoint": "$S3_ENDPOINT",
+    "bucket_name": "$s3_bucket",
+    "access_key": "$s3_access_key_id",
+    "secret_key": "$s3_secret_access_key",
+    "signature_version": "2"
+  },
   "director_hostname": "$OPS_DIR_HOSTNAME"
 }
 EOF
