@@ -221,7 +221,7 @@ cf_properties=$(
     --arg pcf_ert_domain "$PCF_ERT_DOMAIN" \
     --arg system_domain "$SYSTEM_DOMAIN"\
     --arg apps_domain "$APPS_DOMAIN" \
-    --arg mysql_monitor_recipient_email "$mysql_monitor_recipient_email" \
+    --arg mysql_monitor_recipient_email "$MYSQL_MONITOR_EMAIL" \
     --arg db_host "$db_host" \
     --arg db_locket_username "$db_locket_username" \
     --arg db_locket_password "$db_locket_password" \
