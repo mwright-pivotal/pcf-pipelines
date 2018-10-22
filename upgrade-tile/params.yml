@@ -13,11 +13,11 @@
 # limitations under the License.
 
 # Set to true to enable all errands, false to disable all or leave blank to keep states the same.
-enable_errands:
+enable_errands: false
 
 # The IaaS name for which stemcell to download. This must match the IaaS name
 # within the stemcell to download, e.g. "vsphere", "aws", "azure", "google" must be lowercase.
-iaas_type: CHANGEME
+iaas_type: vsphere
 
 git_private_key:
 
@@ -28,7 +28,7 @@ git_private_key:
 # Either opsman_client_id/opsman_client_secret or opsman_admin_username/opsman_admin_password needs to be specified.
 # If you are using opsman_admin_username/opsman_admin_password, edit opsman_client_id/opsman_client_secret to be an empty value.
 # If you are using opsman_client_id/opsman_client_secret, edit opsman_admin_username/opsman_admin_password to be an empty value.
-opsman_admin_username: CHANGEME
+opsman_admin_username: admin
 opsman_admin_password: CHANGEME
 opsman_client_id: CHANGEME
 opsman_client_secret: CHANGEME

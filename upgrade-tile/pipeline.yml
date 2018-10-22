@@ -40,7 +40,7 @@ resources:
 - name: schedule
   type: time
   source:
-    interval: 30m
+    interval: 60m
     start: "12:00 AM"
     stop: "11:59 PM"
     location: America/Los_Angeles
