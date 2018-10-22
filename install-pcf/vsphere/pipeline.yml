@@ -235,7 +235,7 @@ jobs:
       passed: [stage-ert]
 
   - task: configure
-    file: pcf-pipelines/tasks/configure-ert/task.yml
+    file: pcf-pipelines/tasks/config-ert/task-homelab.yml
     params:
       IAAS: vsphere
       OPSMAN_DOMAIN_OR_IP_ADDRESS: {{opsman_domain_or_ip_address}}
@@ -390,6 +390,7 @@ jobs:
       db_silk_password: {{db_silk_password}}
       aws_access_key: {{s3_access_key_id}}
       aws_secret_key: {{s3_secret_access_key}}
+      terraform-state: {{terraform-state}}
 
   - task: disable-errands
     file: pcf-pipelines/tasks/disable-errands/task.yml
