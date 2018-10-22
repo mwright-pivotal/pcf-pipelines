@@ -60,6 +60,9 @@ if isPopulated "${CREDUB_ENCRYPTION_KEY_NAME3}"; then
 fi
 credhub_encryption_keys_json="[$credhub_encryption_keys_json]"
 
+#hard coded for vsphere homelab
+pcf_iaas="vsphere"
+
 if [[ "${pcf_iaas}" == "aws" ]]; then
   if [[ ${POE_SSL_NAME1} == "" || ${POE_SSL_NAME1} == "null" ]]; then
     domains=(
