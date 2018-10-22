@@ -392,6 +392,9 @@ jobs:
       aws_access_key: {{s3_access_key_id}}
       aws_secret_key: {{s3_secret_access_key}}
       terraform-state: {{terraform-state}}
+      pcf_az_1: {{az_1_name}}
+      pcf_az_2: {{az_2_name}}
+      pcf_az_3: {{az_3_name}}
 
   - task: disable-errands
     file: pcf-pipelines/tasks/disable-errands/task.yml
