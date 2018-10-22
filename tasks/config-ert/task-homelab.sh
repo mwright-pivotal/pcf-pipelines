@@ -127,10 +127,10 @@ elif [[ "${pcf_iaas}" == "vsphere" ]]; then
   terraform_prefix="vsphere"
   networking_poe_ssl_certs_json="[
       {
-        \"name\": \"Certificate 1\",
+        \"name\": $POE_SSL_NAME1,
         \"certificate\": {
-          \"cert_pem\": $poe_ssl_cert1,
-          \"private_key_pem\": $poe_ssl_key1
+          \"cert_pem\": $POE_SSL_CERT1,
+          \"private_key_pem\": $POE_SSL_KEY1
         }
       }
     ]"
