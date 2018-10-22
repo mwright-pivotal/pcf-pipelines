@@ -134,7 +134,11 @@ params:
   OPSMAN_CLIENT_ID:
   OPSMAN_CLIENT_SECRET:
   S3_ENDPOINT:
+  aws_secret_key:
+  aws_access_key:
   # db credentials
+  db_host:
+  db_port:
   db_app_usage_service_username:
   db_app_usage_service_password:
   db_autoscale_username:

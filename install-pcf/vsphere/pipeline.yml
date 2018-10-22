@@ -365,6 +365,8 @@ jobs:
       OPSMAN_CLIENT_SECRET: ""
       S3_ENDPOINT: {{S3_ENDPOINT}}
       # db credentials
+      db_host: {{db_host}}
+      db_port: {{db_port}}
       db_app_usage_service_username: {{db_app_usage_service_username}}
       db_app_usage_service_password: {{db_app_usage_service_password}}
       db_autoscale_username: {{db_autoscale_username}}
