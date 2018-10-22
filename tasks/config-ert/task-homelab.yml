@@ -161,6 +161,7 @@ params:
   db_silk_username:
   db_silk_password:
   routing_disable_http:
+  PCF_ERT_DOMAIN:
 
 inputs:
   - name: pcf-pipelines
