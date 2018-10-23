@@ -18,6 +18,20 @@ saml_certificates=$(generate_cert "${saml_domains[*]}")
 saml_cert_pem=`echo $saml_certificates | jq --raw-output '.certificate'`
 saml_key_pem=`echo $saml_certificates | jq --raw-output '.key'`
 
+function formatNetworkingPoeSslCertsJson() {
+    name="${1}"
+    cert=${2//$'\n'/'\n'}
+    key=${3//$'\n'/'\n'}
+    networking_poe_ssl_certs_json="{
+      \"name\": \"$name\",
+      \"certificate\": {
+        \"cert_pem\": \"$cert\",
+        \"private_key_pem\": \"$key\"
+      }
+    }"
+    echo "$networking_poe_ssl_certs_json"
+}
+
 function isPopulated() {
     local true=0
     local false=1
@@ -125,7 +139,7 @@ elif [[ "${pcf_iaas}" == "gcp" ]]; then
   ]"
 elif [[ "${pcf_iaas}" == "vsphere" ]]; then
   terraform_prefix="vsphere"
-  networking_poe_ssl_certs_json="[{\"name\": \"primary\", \"certificate\": {\"cert_pem\": \"\", \"private_key_pem\": \"\"}}]"
+  networking_poe_ssl_certs_json=$(formatNetworkingPoeSslCertsJson "${POE_SSL_NAME1}" "${POE_SSL_CERT1}" "${POE_SSL_KEY1}")
 fi
 
 cf_network=$(
