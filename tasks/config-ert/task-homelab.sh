@@ -133,10 +133,11 @@ cf_network=$(
     --arg iaas $pcf_iaas \
     --arg singleton_availability_zone "$pcf_az_1" \
     --arg other_availability_zones "$pcf_az_1,$pcf_az_2,$pcf_az_3" \
+    --arg network_name "$NETWORK_NAME" \
     '
     {
       "network": {
-        "name": (if $iaas == "aws" then "deployment" else $NETWORK_NAME end),
+        "name": (if $iaas == "aws" then "deployment" else $network_name end),
       },
       "other_availability_zones": ($other_availability_zones | split(",") | map({name: .})),
       "singleton_availability_zone": {
