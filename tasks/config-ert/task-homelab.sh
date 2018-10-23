@@ -131,8 +131,8 @@ fi
 cf_network=$(
   jq -n \
     --arg iaas $pcf_iaas \
-    --arg singleton_availability_zone "$pcf_az_1" \
-    --arg other_availability_zones "$pcf_az_1,$pcf_az_2,$pcf_az_3" \
+    --arg singleton_availability_zone "$ERT_SINGLETON_JOB_AZ" \
+    --arg other_availability_zones "$DEPLOYMENT_NW_AZS" \
     --arg network_name "$NETWORK_NAME" \
     '
     {
