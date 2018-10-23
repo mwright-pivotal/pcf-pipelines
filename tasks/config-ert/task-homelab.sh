@@ -129,8 +129,8 @@ elif [[ "${pcf_iaas}" == "vsphere" ]]; then
       {
         \"name\": \"Certificate 1\",
         \"certificate\": {
-          \"cert_pem\": "",
-          \"private_key_pem\": ""
+          \"cert_pem\": ,
+          \"private_key_pem\": 
         }
       }
     ]"
