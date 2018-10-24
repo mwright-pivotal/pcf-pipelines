@@ -139,7 +139,7 @@ elif [[ "${pcf_iaas}" == "gcp" ]]; then
   ]"
 elif [[ "${pcf_iaas}" == "vsphere" ]]; then
   terraform_prefix="vsphere"
-  networking_poe_ssl_certs_json=$(formatNetworkingPoeSslCertsJson "${POE_SSL_NAME1}" "${POE_SSL_CERT1}" "${POE_SSL_KEY1}")
+  networking_poe_ssl_certs_json=[$(formatNetworkingPoeSslCertsJson "${POE_SSL_NAME1}" "${POE_SSL_CERT1}" "${POE_SSL_KEY1}")]
 fi
 
 cf_network=$(
